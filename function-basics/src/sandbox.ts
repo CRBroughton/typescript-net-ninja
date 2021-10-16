@@ -28,3 +28,5 @@ const addDefault = (a: number, b: number, c: number | string = 10) => {
 const returnType = (a: number, b: number): number => {
     return a + b
 }
+
+// when a return value is non-existent, the function will return a void type
