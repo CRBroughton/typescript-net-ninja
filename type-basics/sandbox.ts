@@ -13,3 +13,12 @@ age = 40
 // isBlackBelt can be set to true, because it is already a boolean
 // however it cannot be set to anything else
 isBlackBelt = true
+
+
+// The below function is using a declared typed variable
+// Uncommenting out the consol.log shows that a string cannot be passed
+const circ = (diameter: number) => {
+    return diameter * Math.PI
+}
+
+// console.log(circ('hello'))
