@@ -18,3 +18,13 @@ let mixed: (string|number)[] = []
 let uid: string|number
 
 // Objects
+let ninjaOne: object
+ninjaOne = { name: 'yoshi', age: 30}
+
+// Obejcts can also have explicitly set properties
+// within the object declaration
+let ninjaTwo: {
+    name: string,
+    age: number,
+    beltColour: string
+}
