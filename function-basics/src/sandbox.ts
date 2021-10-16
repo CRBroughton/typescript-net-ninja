@@ -23,3 +23,8 @@ const addDefault = (a: number, b: number, c: number | string = 10) => {
 }
 
 // making c defaulting to 10 unless specified
+
+// it is also possible to specify the return type
+const returnType = (a: number, b: number): number => {
+    return a + b
+}
