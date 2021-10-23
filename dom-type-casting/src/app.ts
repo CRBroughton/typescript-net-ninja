@@ -33,5 +33,5 @@ form.addEventListener('submit', (e: Event) => {
         type.value,
         toFrom.value, 
         details.value, 
-        amount.value)
+        amount.valueAsNumber)
 })
