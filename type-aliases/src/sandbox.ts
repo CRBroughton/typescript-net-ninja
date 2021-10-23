@@ -1,32 +1,11 @@
-// Typescript will infer that the below is a function type
-// You can also declare the type:
 
-// let greet: Function
+// This is a type alias
+type StringOrNum = string | number;
 
-// notice how the Function type uses a capital letter
-
-let greet = () => {
-    console.log('hello, world!')
+const logDetails = (uid: StringOrNum, item: string) => {
+    console.log(`${item} has a uid of ${uid}`);
 }
 
-// Optional types / arguments
-
-// Option arguments are prefixed with a ? mark
-const add = (a: number, b: number, c?: number | string) => {
-    console.log(a + b, c)
+const greet = (user: { name: string, uid: StringOrNum}) => {
+    console.log(`${user.name} says hello`);
 }
-
-// If we wanted a default value, we could do the following:
-
-const addDefault = (a: number, b: number, c: number | string = 10) => {
-    console.log(a + b, c)
-}
-
-// making c defaulting to 10 unless specified
-
-// it is also possible to specify the return type
-const returnType = (a: number, b: number): number => {
-    return a + b
-}
-
-// when a return value is non-existent, the function will return a void type
