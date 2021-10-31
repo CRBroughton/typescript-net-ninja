@@ -52,6 +52,16 @@ const enumExampleOne: EnumInterface<object> = {
 
 console.log(enumExampleOne)
 
+// Tuples
+
+// Tuples have a constant positional type: the type at that
+// position cannot be changed. The below example, at position one
+// can only ever be a string.
+
+
+let tupleArray: [string, number, boolean] = ['ryu', 25, true]
+
+
 // Interfaces with Classes
 
 let docOne: HasFormatter;
