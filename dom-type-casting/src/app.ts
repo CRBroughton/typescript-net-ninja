@@ -1,3 +1,17 @@
+// Classes
+
+class Invoice {
+    client: string;
+    details: string;
+    amount: number;
+
+    constructor(c: string, d: string, a: number) {
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
+}
+
 // the ! is us saying "I know this exists"
 // You could also either wrap the console.log
 // in a if check
