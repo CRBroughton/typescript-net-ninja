@@ -3,6 +3,35 @@ import { Payment } from './classes/Payment.js';
 import { HasFormatter } from './interfaces/HasFormatter.js';
 import { ListTemplate } from './classes/ListTemplate.js'
 
+// Generics
+
+// Generics capture the types of the properties / object
+// that is passed in. 
+
+// By using the extends option, you can tell the generic
+// that whatever is passed in must start and extend as that type
+
+const addUID = <T extends object>(obj: T) => {
+    let uid = Math.floor(Math.random() * 100)
+    return {...obj, uid}
+}
+let uidOne = addUID({name: 'yoshi', age: 40})
+
+console.log(uidOne.name)
+
+// Generics with interfaces
+interface Resource<T> {
+    uid: number;
+    resourceName: string;
+    data: T;
+}
+
+const docThree: Resource<string> = {
+    uid: 1,
+    resourceName: 'person',
+    data: 'shaun'
+}
+
 // Interfaces with Classes
 
 let docOne: HasFormatter;
