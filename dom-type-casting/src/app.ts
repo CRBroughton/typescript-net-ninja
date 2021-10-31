@@ -10,6 +10,10 @@ class Invoice {
         this.details = d;
         this.amount = a;
     }
+
+    format() {
+        return `${this.client} owes £${this.amount} for ${this.details}`
+    }
 }
 
 // the ! is us saying "I know this exists"
