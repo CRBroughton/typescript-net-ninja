@@ -19,6 +19,19 @@ let uidOne = addUID({name: 'yoshi', age: 40})
 
 console.log(uidOne.name)
 
+// Generics with interfaces
+interface Resource<T> {
+    uid: number;
+    resourceName: string;
+    data: T;
+}
+
+const docThree: Resource<string> = {
+    uid: 1,
+    resourceName: 'person',
+    data: 'shaun'
+}
+
 // Interfaces with Classes
 
 let docOne: HasFormatter;
