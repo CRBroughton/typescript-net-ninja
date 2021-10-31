@@ -3,6 +3,16 @@ import { Payment } from './classes/Payment.js';
 import { HasFormatter } from './interfaces/HasFormatter.js';
 import { ListTemplate } from './classes/ListTemplate.js'
 
+// Generics
+
+const addUID = (obj: object) => {
+    let uid = Math.floor(Math.random() * 100)
+    return {...obj, uid}
+}
+let uidOne = addUID({name: 'yoshi', age: 40})
+
+console.log(uidOne)
+
 // Interfaces with Classes
 
 let docOne: HasFormatter;
