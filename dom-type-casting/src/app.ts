@@ -52,6 +52,16 @@ const enumExampleOne: EnumInterface<object> = {
 
 console.log(enumExampleOne)
 
+// Tuples
+
+// Tuples have a constant positional type: the type at that
+// position cannot be changed. The below example, at position one
+// can only ever be a string.
+
+
+let tupleArray: [string, number, boolean] = ['ryu', 25, true]
+
+
 // Interfaces with Classes
 
 let docOne: HasFormatter;
@@ -145,12 +155,15 @@ const list = new ListTemplate(ul)
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
 
+    let values: [string, string, number]
+    values = [toFrom.value, details.value, amount.valueAsNumber];
+
     let doc: HasFormatter;
 
     if (type.value === 'invoice') {
-        doc = new Invoice(toFrom.value, details.value, amount.valueAsNumber)
+        doc = new Invoice(...values)
     } else {
-        doc = new Payment(toFrom.value, details.value, amount.valueAsNumber)
+        doc = new Payment(...values)
     }
 
     list.render(doc, type.value, 'end')
