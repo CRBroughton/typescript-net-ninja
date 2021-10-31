@@ -5,13 +5,19 @@ import { ListTemplate } from './classes/ListTemplate.js'
 
 // Generics
 
-const addUID = (obj: object) => {
+// Generics capture the types of the properties / object
+// that is passed in. 
+
+// By using the extends option, you can tell the generic
+// that whatever is passed in must start and extend as that type
+
+const addUID = <T extends object>(obj: T) => {
     let uid = Math.floor(Math.random() * 100)
     return {...obj, uid}
 }
 let uidOne = addUID({name: 'yoshi', age: 40})
 
-console.log(uidOne)
+console.log(uidOne.name)
 
 // Interfaces with Classes
 
