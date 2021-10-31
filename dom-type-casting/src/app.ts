@@ -32,6 +32,26 @@ const docThree: Resource<string> = {
     data: 'shaun'
 }
 
+// Enums
+
+// Each item in a enum object will return a number
+
+enum ResourceType { BOOK, AUTHOR, FILM, DIRECTOR, PERSON }
+
+interface EnumInterface<T> {
+    uid: number;
+    ResourceType: ResourceType;
+    data: T;
+}
+
+const enumExampleOne: EnumInterface<object> = {
+    uid: 1,
+    ResourceType: ResourceType.BOOK,
+    data: { title: 'name of the wind'}
+}
+
+console.log(enumExampleOne)
+
 // Interfaces with Classes
 
 let docOne: HasFormatter;
