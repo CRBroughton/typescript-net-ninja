@@ -1,3 +1,21 @@
+import { Invoice } from './classes/Invoice.js';
+import { Payment } from './classes/Payment.js';
+import { HasFormatter } from './interfaces/HasFormatter.js';
+
+let docOne: HasFormatter;
+let docTwo: HasFormatter;
+
+docOne = new Invoice('yoshi', 'web work', 250)
+docTwo = new Payment('mario', 'plumbing work', 200)
+
+
+let docs: HasFormatter[] = [];
+
+// items going into this array have to have the HasFormatter interface
+
+docs.push(docOne)
+docs.push(docTwo)
+
 // Interfaces
 
 // Interfaces define how a type should be structured. A variable without that
@@ -29,8 +47,6 @@ const greetPerson = (person: isPerson) => {
 greetPerson(me)
 
 console.log(me)
-
-import { Invoice } from "./classes/Invoice.js"
 
 const invOne = new Invoice('mario', 'work on the mario website', 250)
 
