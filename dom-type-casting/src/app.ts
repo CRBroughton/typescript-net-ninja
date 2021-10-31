@@ -1,3 +1,35 @@
+// Interfaces
+
+// Interfaces define how a type should be structured. A variable without that
+// strict definition won't be allowed. Below is the me const with uses the isPerson
+// interface.
+interface isPerson {
+    name: string;
+    age: number;
+    speak(a: string): void;
+    spend(a: number): number;
+}
+
+const me: isPerson = {
+    name: 'shaun',
+    age: 31,
+    speak(text: string): void {
+        console.log(text)
+    },
+    spend(amount: number): number {
+        console.log('I spent', amount)
+        return amount
+    }
+}
+
+const greetPerson = (person: isPerson) => {
+    console.log('hello ', person.name)
+}
+
+greetPerson(me)
+
+console.log(me)
+
 import { Invoice } from "./classes/Invoice.js"
 
 const invOne = new Invoice('mario', 'work on the mario website', 250)
