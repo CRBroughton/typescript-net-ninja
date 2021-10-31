@@ -1,7 +1,7 @@
 // Interfaces
 
 // Interfaces define how a type should be structured. A variable without that
-// strict definition won't be allowed. Below is the me const with uses the isPerson
+// strict definition won't be allowed. Below is the me const which uses the isPerson
 // interface.
 interface isPerson {
     name: string;
