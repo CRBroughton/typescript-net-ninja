@@ -1,6 +1,8 @@
+import { HasFormatter } from "../interfaces/HasFormatter.js"
+
 // Classes
 
-export class Invoice {
+export class Invoice implements HasFormatter {
     // the three below values has optional modifiers which go in front:
     // readonly: Can only be read, cannot be modified in or out of the class.
     // private: Can only be read inside of the class.
