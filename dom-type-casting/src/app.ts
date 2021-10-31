@@ -48,17 +48,17 @@ const greetPerson = (person: isPerson) => {
 
 greetPerson(me)
 
-console.log(me)
+// console.log(me)
 
-const invOne = new Invoice('mario', 'work on the mario website', 250)
+// const invOne = new Invoice('mario', 'work on the mario website', 250)
 
-const invTwo = new Invoice('luigi', 'work on the luigi website', 300)
+// const invTwo = new Invoice('luigi', 'work on the luigi website', 300)
 
-let invoices: Invoice[] = [];
-invoices.push(invOne);
-invoices.push(invTwo);
+// let invoices: Invoice[] = [];
+// invoices.push(invOne);
+// invoices.push(invTwo);
 
-console.log(invoices)
+// console.log(invoices)
 
 // the ! is us saying "I know this exists"
 // You could also either wrap the console.log
@@ -91,9 +91,13 @@ const amount = document.querySelector('#amount') as HTMLInputElement;
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
 
-    console.log(
-        type.value,
-        toFrom.value, 
-        details.value, 
-        amount.valueAsNumber)
+    let doc: HasFormatter;
+
+    if (type.value === 'invoice') {
+        doc = new Invoice(toFrom.value, details.value, amount.valueAsNumber)
+    } else {
+        doc = new Payment(toFrom.value, details.value, amount.valueAsNumber)
+    }
+
+    console.log(doc)
 })
