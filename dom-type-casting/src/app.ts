@@ -22,6 +22,12 @@ const me: isPerson = {
     }
 }
 
+const greetPerson = (person: isPerson) => {
+    console.log('hello ', person.name)
+}
+
+greetPerson(me)
+
 console.log(me)
 
 import { Invoice } from "./classes/Invoice.js"
