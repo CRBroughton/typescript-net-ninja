@@ -16,6 +16,11 @@ class Invoice {
     }
 }
 
+const invOne = new Invoice('mario', 'work on the mario website', 250)
+
+const invTwo = new Invoice('luigi', 'work on the luigi website', 300)
+
+
 // the ! is us saying "I know this exists"
 // You could also either wrap the console.log
 // in a if check
