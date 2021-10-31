@@ -2,6 +2,8 @@ import { Invoice } from './classes/Invoice.js';
 import { Payment } from './classes/Payment.js';
 import { HasFormatter } from './interfaces/HasFormatter.js';
 
+// Interfaces with Classes
+
 let docOne: HasFormatter;
 let docTwo: HasFormatter;
 
